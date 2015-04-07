@@ -60,6 +60,9 @@ task copyCatalog(type: Copy) {
 }
 
 jar {
+  into ('lib') {
+    from configurations.copydep
+  }
   from { ['build/catalog.xml', 'resources/library.xpl'] }
   manifest {
     instruction 'Built-By', builtBy
