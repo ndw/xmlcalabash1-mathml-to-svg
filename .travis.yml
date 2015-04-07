@@ -1,0 +1,17 @@
+language: java
+script: gradle dist
+install:
+- echo sonatypeUsername=none >> gradle.properties
+- echo sonatypePassword=none >> gradle.properties
+deploy:
+  provider: releases
+  api_key:
+    secure: TnOXlSqeWyyQzugWo7/wM3AjgmnVKhPI0gihR9n6IjvTcDEVDMYTzR/vbVBooDXCilvMscU/9h+If8mfD6wBFpyMfEh4XImq0Do5/YAsOFrqoPaWBU7lo2CnwfPSQbssqdUzdo/IRIv2dnhcNNQIXAUeNK97ydXG+pTR22ERXxU=
+  file:
+    - build/distributions/xmlcalabash1-mathml-to-svg-$TRAVIS_TAG.zip
+    - build/libs/xmlcalabash1-mathml-to-svg-$TRAVIS_TAG.zip
+  on:
+    tags: true
+    all_branches: true
+
+
