@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://xmlcalabash.com/extension/steps/mathml-to-svg.xpl"
+       uri="jar:file:lib/xmlcalabash1-mathml-to-svg-VERSION.jar!/library.xpl"/>
+</catalog>
