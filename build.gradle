@@ -34,7 +34,8 @@ dependencies {
   compile (
     [group: 'com.nwalsh', name: 'nwalsh-annotations', version: '1.0.0'],
     [group: 'com.xmlcalabash', name: 'xmlcalabash', version: '1.1.0-95'],
-    [group: 'net.sourceforge.jeuclid', name: 'jeuclid-core', version: '3.1.9']
+    [group: 'net.sourceforge.jeuclid', name: 'jeuclid-core', version: '3.1.9'],
+    [group: 'org.apache.xmlgraphics', name: 'batik-svggen', version: '1.7']
   )
 }
 
@@ -185,7 +186,7 @@ uploadArchives {
       }
 
       pom.project {
-        name 'XML Calabash MarkLogic MathMl-to-SVG step'
+        name 'XML Calabash MathMl-to-SVG step'
         packaging 'jar'
         description 'XML Calabash extension step to convert MathML to SVG'
         url 'https://github.com/ndw/xmlcalabash1-mathml-to-svg'
