@@ -2,10 +2,11 @@
                 xmlns:p="http://www.w3.org/ns/xproc"
                 xmlns:c="http://www.w3.org/ns/xproc-step"
                 xmlns:cx="http://xmlcalabash.com/ns/extensions"
-                exclude-inline-prefixes="c cx">
+                xmlns:svg="http://www.w3.org/2000/svg"
+                exclude-inline-prefixes="c cx svg">
 <p:output port="result"/>
 
-<p:import href="../../../resources/library.xpl"/>
+<p:import href="http://xmlcalabash.com/extension/steps/mathml-to-svg.xpl"/>
 
 <cx:mathml-to-svg>
   <p:input port="source">
@@ -32,11 +33,8 @@
   </p:input>
 </cx:mathml-to-svg>
 
-<p:wrap-sequence wrapper="fred"/>
-
-<!--
 <p:choose>
-  <p:when test="contains(string(/), 'data:image/png;')">
+  <p:when test="/svg:svg">
     <p:identity>
       <p:input port="source">
         <p:inline><c:result>PASS</c:result></p:inline>
@@ -51,6 +49,5 @@
     </p:error>
   </p:otherwise>
 </p:choose>
--->
 
 </p:declare-step>
