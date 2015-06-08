@@ -53,6 +53,7 @@ import java.util.Properties;
 
 public class MathMLtoSVG extends DefaultStep {
     private static final String library_xpl = "http://xmlcalabash.com/extension/steps/mathml-to-svg.xpl";
+    private static final String library_url = "/com/xmlcalabash/extensions/mathml-to-svg/library.xpl";
 
     private ReadablePipe source = null;
     private WritablePipe result = null;
@@ -174,14 +175,14 @@ public class MathMLtoSVG extends DefaultStep {
                 URI baseURI = new URI(base);
                 URI xpl = baseURI.resolve(href);
                 if (library_xpl.equals(xpl.toASCIIString())) {
-                    URL url = MathMLtoSVG.class.getResource("/library.xpl");
+                    URL url = MathMLtoSVG.class.getResource(library_url);
                     logger.debug("Reading library.xpl for cx:mathml-to-svg from " + url);
-                    InputStream s = MathMLtoSVG.class.getResourceAsStream("/library.xpl");
+                    InputStream s = MathMLtoSVG.class.getResourceAsStream(library_url);
                     if (s != null) {
                         SAXSource source = new SAXSource(new InputSource(s));
                         return source;
                     } else {
-                        logger.info("Failed to read library.xpl for cx:mathml-to-svg");
+                        logger.info("Failed to read " + library_url + " for cx:mathml-to-svg");
                     }
                 }
             } catch (URISyntaxException e) {
