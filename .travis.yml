@@ -1,16 +1,18 @@
 language: java
-script: gradle dist
+
+script: "./gradlew dist"
+
 install:
 - echo sonatypeUsername=none >> gradle.properties
 - echo sonatypePassword=none >> gradle.properties
+
 deploy:
   provider: releases
   api_key:
-    secure: TnOXlSqeWyyQzugWo7/wM3AjgmnVKhPI0gihR9n6IjvTcDEVDMYTzR/vbVBooDXCilvMscU/9h+If8mfD6wBFpyMfEh4XImq0Do5/YAsOFrqoPaWBU7lo2CnwfPSQbssqdUzdo/IRIv2dnhcNNQIXAUeNK97ydXG+pTR22ERXxU=
+    secure: P4mqefcttxFYNL3KJWobMJGWsbhQxNFh9ff5SSnuWn0/EYmxgWEz9ACah5FekpJl5qmD+NBW2GxZONSuPjrGgFwpctmI7Dlg8M+cGCLEuXA/EQGu7+lwG5OiEFP4y4piQM/mi7qZYMzoe9c6V9BbJSn8bzMe12A8sud0V7420rw=
+  skip_cleanup: true
   file:
     - build/distributions/xmlcalabash1-mathml-to-svg-$TRAVIS_TAG.zip
   on:
     tags: true
     all_branches: true
-
-

@@ -60,9 +60,6 @@ public class MathMLtoSVG extends DefaultStep {
     private Properties options = new Properties();
     private MutableLayoutContext params = null;
 
-    /**
-     * Creates a new instance of MathMLtoSVG
-     */
     public MathMLtoSVG(XProcRuntime runtime, XAtomicStep step) {
         super(runtime,step);
     }
