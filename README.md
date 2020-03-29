@@ -7,7 +7,12 @@ This repository contains an
 step that can compare XML documents using
 [DeltaXML](http://www.deltaxml.com/).
 
-This step should work with either Saxon 9.5 or Saxon 9.6.
+This step should work with either Saxon 9.5 or later.
+
+The class `org.w3c.dom.events.CustomEvent` was removed from the JDK. At the moment,
+this step won’t build with recent versions of the JDK. I believe this will resolve itself when
+`jeuclid-core` is updated to use `org.apache.batik.w3c.dom.events.CustomEvent`.
+But that’s just a guess.
 
 ## Installation
 
