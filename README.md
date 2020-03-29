@@ -1,11 +1,10 @@
-# XML Calabash Delta XML extension step
+# XML Calabash MathML to SVG extension step
 
-[![Build Status](https://travis-ci.org/ndw/xmlcalabash1-deltaxml.svg?branch=master)](https://travis-ci.org/ndw/xmlcalabash1-deltaxml.svg?branch=master)
+[![Build Status](https://travis-ci.org/ndw/xmlcalabash1-mathml-to-svg.svg?branch=master)](https://travis-ci.org/ndw/xmlcalabash1-mathml-to-svg.svg?branch=master)
 
 This repository contains an
 [XML Calabash](http://github.com/ndw/xmlcalabash1) 1.1 extension
-step that can compare XML documents using
-[DeltaXML](http://www.deltaxml.com/).
+step that can convert MathML to SVG.
 
 This step should work with either Saxon 9.5 or later.
 
@@ -29,4 +28,3 @@ if you're including the Maven dependency in some other Maven project.
 If you just grab the `jar` from Maven and don't get the other dependencies,
 you're likely to find that the step doesn't work because of some missing
 dependencies.
-
