@@ -33,6 +33,7 @@ dependencies {
     [group: 'com.nwalsh', name: 'nwalsh-annotations', version: '1.0.1'],
     [group: 'com.xmlcalabash', name: 'xmlcalabash', version: xmlCalabashVersion],
     [group: 'net.sourceforge.jeuclid', name: 'jeuclid-core', version: '3.1.9'],
+    [group: 'org.apache.xmlgraphics', name: 'batik', version: '1.12'],
     [group: 'org.apache.xmlgraphics', name: 'batik-svggen', version: '1.12']
   )
 }
